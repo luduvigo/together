@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leftover...</title>
+
+  <!--CSS Libraries-->
+
+  <link rel="stylesheet" type="text/css" href="welcome.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+</head>
+
+<body>
+
+<!-- THE HEADER STUFF -->
+
+  <div id="thetop" class="headerstuff">
+
+  <!--Sticky Navbar stuffs-->
+  <nav id="navbar">
+
+    <div id="thenav" class="container-fluid headerstuff">
+      <div class="row">
+            
+        <!--THE LOGO-->
+
+        <div class="logo headerstuff col-md-4 ">
+          <div id="lpbox">
+            <h1 id="logophrase" >Leftover...</h1>
+          </div>
+        </div>
+
+        <!--THE NON LOGGED IN PAGES-->
+
+        <div id="notthelogin" class="headerstuff col-md-4">
+          <div class="row">
+            <span>            
+              <button onclick="jumpto('aboutpage');" type="button" class="menutitle btn-lg col-md-4 btn btn-info">About</button>
+            </span>
+
+            <span>            
+              <button onclick="jumpto('signup');" type="button" class="menutitle btn-lg col-md-4 btn btn-info">Sign Up</button>         
+            </span>
+            
+            <span>        
+              <button onclick="jumpto('TCs');" type="button" class="menutitle btn-lg col-md-4 btn btn-info">
+              <p>Terms and</p>
+              <p> Conditions</p>
+              </button>         
+            </span>
+          </div>
+
+        </div>
+
+        <!--THE LOGIN FORM -->
+
+        <div id="login" class="login headerstuff col-md-3" >
+          <form class="navbar-form" action="http://localhost:8080/logged#user">
+
+          <div class="form-group" id="emailogin">
+            <input id="emailogin" type="text" class="form-control" placeholder="Email Address">
+          </div>
+
+          <div class="form-group" id="passwordlogin">
+            <input id="passwordlogin" type="password" class="form-control" placeholder="Password">
+          </div>
+
+          <div id="loginbutton">
+            <button id="loginbutton"type="submit" class="btn btn-default" >Login</button>
+            <!--<button id="loginbutton"type="submit" class="btn btn-default" onclick="javascript:location.href='logged.html#users'">Login</button>-->
+          </div>
+
+          </form>
+        </div>            
+            
+      </div>
+    </div>
+
+  </nav>
+
+  </div>
+
+<div id="mainpages">
+
+  <!-- THE ABOUT PAGE -->
+
+  <div id="aboutpage" class="container-fluid page">
+
+
+    <div class="row">
+    <div class="abouttext">
+
+      <div class="col-md-6 content about">
+
+        <div id="aboutustitle" >
+          <p class="text_head" >ABOUT US</p>
+        </div>
+
+        <p> 
+          Reducing waste by allowing local businesses to give away products reduced to clear at the end of the day by alerting nearby customers of the products so they can buy them and they don't go to landfill.
+        </p>
+        <p>
+          Dance right there you're not sorry 2 a.m. breathe rhode island. Shine two a.m. music The Voice banana quinoa. Muffin Hailee Steinfeld games vote for Taylor so. Basically too late how it ought to be mean streak Emma. Stone high heel girl in the dress car. Marry not a princess history. 13 Management caught onto somehting cheer captain tea. Party thirteen available at Target cursing. Your name never ever getting back together head first.
+        </p>
+      </div>
+
+      <div class="col-md-6 about">
+
+      </div>
+
+    </div>
+    </div>
+
+  </div>
+
+
+  <!-- THE SIGN UP PAGE -->
+
+  <div id="signup" class="container-fluid page">
+
+    <div class="content row" id="signcontent">
+
+      <div id="signuptitle" class="col-md-12" >
+        <p class="text_head " >SIGN UP</p>
+      </div>
+
+      <div class="row">
+          
+          <div class="col-md-1"></div>
+      <div class="col-md-11">
+
+        <form >
+
+          <!-- Explanatory text-->
+          <div class="row">
+            <div class="col-md-12">
+              <p>Please fill in the form below to register with Leftover:</p>
+              <p class="smallprint">All fields marked with asterisk * are compulsory</p>
+            </div>
+          </div>
+
+          <div class="row">
+          
+              <div class = "col-md-1"></div>
+          <div class = "col-md-5">
+
+          <!--NAMES-->
+            <div id="name" class="form-inline row">
+
+              <div class="form-group formthings" id="firstname">
+                <label class="FormTitle ">Forename* </label>
+                <br>
+                <input id="firstname" type="text" class="form-control formthings" placeholder="First Name">
+              </div>
+              <br><br><br>
+              <div class="form-group formthings" id="surname">
+                <label class="FormTitle ">Surname* </label>
+                <br>
+                <input id="surname" type="text" class="form-control formthings" placeholder="Surname">
+              </div>
+              <br><br><br>
+
+            </div>
+
+            <!--EMAIL STUFF 
+                  Maybe implement SendGrid stuff here later if spare time?
+            -->
+            <div class="form-group formthings row" id="emailsignup">
+              <label class="FormTitle">Email Address* </label>
+              <input id="emailsignup" type="text" class="form-control formthings" placeholder="Email Address">
+            </div>
+                <br>
+          </div>
+
+
+          <div class="col-md-6">
+            <!--PASSWORD STUFF
+                  Something something SQL and security something something...
+            -->
+            <div id="passwordstuff" class="row">
+
+              <div class="form-group formthings" id="passwordsignup">
+                <label class="FormTitle">Password* </label>
+                <input id="passwordsignup" type="password" class="form-control formthings" placeholder="Password">
+              </div>
+              <br><br>
+
+              <div class="form-group formthings" id="passwordconfirm">
+                <label class="FormTitle">Confirm Password* </label>
+                <input id="passwordconfirm" type="password" class="form-control formthings" placeholder="Confirm Password">
+              </div>
+              <br><br>
+
+            </div>
+
+            <!--DEFAULT PREFERENCES-->
+            <div class="form-group formthings row" id="defaultradius">
+              <label class="FormTitle">Default Radius </label>
+              <input id="defaultradius" type="number" max="30" class="form-control formthings" placeholder="How Nearby?">
+
+              <p>Please Note if left blank, the default will be set to 10 Miles</p>
+            </div>
+
+          </div>
+        </div>
+        
+
+          <!-- THE SUBMIT BUTTON -->
+
+        </form>
+
+          <div id="signupbtn" class="formthings row"> 
+            <button type="submit" class="btn btn-success btn-lg">Sign Up</button>
+          </div>
+
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERMS & CONDITIONS -->
+
+  <div id="TCs" class="container-fluid page">
+
+    <div id="TCtext" class="row">
+    <div class ="col-md-12">
+    <div class="content">
+
+      <div id="TCtitle" >
+        <p class="text_head" >TERMS AND CONDITIONS</p>
+      </div>
+
+      <div>
+        <ol>
+          
+        <li>You shouldn't bother reading the Terms and Conditions properly, I mean who actually does that?</li>
+        <li>Something something small print...</li>
+        <li>Mumble mumble security and privacy issues mumble mumble</li>
+        <li>Cristiano!</li>
+
+        </ol>
+      </div>
+
+    </div>
+    </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!--Javscript Libraries-->
+  <script src="welcome.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</body>
+</html>
