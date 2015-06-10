@@ -3,7 +3,7 @@ var express = require('express'),
     app = express(),
     http = require('http'),
     cons = require('consolidate'),
-    stylus = require('stylus'),
+    stylus = require('stylus');
 
 //set path to the views (template) directory
 app.set('views', __dirname + '/views');
