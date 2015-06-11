@@ -40,5 +40,6 @@ app.get('*', function(req, res){
 	res.status(404).render("404");
 });
 
-app.listen(8080);
-console.log("Express server started on port 8080");
+app.listen(process.env.PORT || 8080, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
