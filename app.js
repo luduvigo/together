@@ -42,8 +42,3 @@ app.get('*', function(req, res){
 
 app.listen(8080);
 console.log("Express server started on port 8080");
-
-var ngrok = require('ngrok');
-ngrok.connect(8080, function (err, url) {
-       // https://leftover.ngrok.com -> 127.0.0.1:8080  
-});
