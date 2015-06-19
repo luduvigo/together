@@ -53,6 +53,18 @@ h6 {
 	/*height: 500px; */
 }
 
+.content-demo {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    color: #000000;
+    background: url(../img/main.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.image-text-demo {
+    color: #ffffff;
+}
+
 .intro-message {
     position: relative;
     padding-top: 10%;

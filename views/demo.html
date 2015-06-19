@@ -32,6 +32,8 @@
 <body ng-app="app">
 	
 	<!-- Navigation -->
+	<div class="container">
+		<div class="row">
     <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
         <div class="container topnav">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -65,27 +67,37 @@
         </div>
         <!-- /.container -->
     </nav>
+		</div>
+	</div>
 	
-	<div ng-controller="PostsCtrl" class="container">
-		<h1>Cosa vuoi fare?</h1>
-		<form role="form">
-			<div class="form-group">
-				Dicci cosa ti piacerebbe fare ora.
-				<div class="input-group">
-					<input ng-model="postBody" class="form-control" />
-					<span class="input-group-btn">
-						<button ng-click="addPost()" class="btn btn-default">Aggiungi desiderio</button>
-					</span>
-				</div>
-			</div>		
-		</form>
+	<div class="content-demo">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+			<div ng-controller="PostsCtrl" class="container">
+				<form role="form">
+					<div class="form-group">
+						<div class="image-text-demo">Dicci cosa ti piacerebbe fare ora.</div>
+						<div class="input-group">
+							<input ng-model="postBody" class="form-control" />
+							<span class="input-group-btn">
+								<button ng-click="addPost()" class="btn btn-default">Aggiungi desiderio</button>
+							</span>
+						</div>
+					</div>		
+				</form>
 		
-		<ul class="list-group">
-			<li ng-repeat="post in posts" class="list-group-item">
-				<strong>Utente {{post.username}}</strong>
-				<span>Desiderio {{post.body}}</span>
-			</li>
-		</ul>
+				<ul class="list-group">
+					<li ng-repeat="post in posts" class="list-group-item">
+						<strong>Utente {{post.username}}</strong>
+						<span>Desiderio {{post.body}}</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+			</div>
+			</div>
 	</div>
 	
 	    <!-- Footer -->
