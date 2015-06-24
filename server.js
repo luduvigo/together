@@ -5,6 +5,8 @@ var express = require('express'),
     cons = require('consolidate'),
     stylus = require('stylus');
 
+var Post = require("./models/post")
+
 //set path to the views (template) directory
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
@@ -39,6 +41,9 @@ app.get('/demo', function (req, res) {
 });
 
 app.use(bodyParser.urlencoded({extended: true}));
+
+app.use("/api/posts", require("./controllers/api/posts"))
+app.use(require("./controllers/static"))
 
 app.get('*', function(req, res){
 	res.status(404).render("404");
