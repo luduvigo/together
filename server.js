@@ -36,10 +36,6 @@ app.get('/', function (req, res) {
     res.render('index');
 });
 
-app.get('/demo', function (req, res) {
-    res.render('demo');
-});
-
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use("/api/posts", require("./controllers/api/posts"))

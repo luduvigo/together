@@ -89,15 +89,12 @@
 						</div>
 					</div>		
 				</form>
-		
+				
 				<ul class="list-group">
-					<li ng-repeat="post in posts" class="list-group-item">
-						<strong>{{post.username}}</strong>
-						<span>{{post.date_activity}}</span>
-						<span>{{post.place}}</span>
-					</li>
-					<li>
-						<span>{{post.body}}</span>
+					<li ng-repeat="post in posts | orderBy: '-date'" class="list-group-item">
+						{{ post }}
+						<!-- strong>{{post.username}}</strong>
+						<span>{{post.date_activity}} {{post.place}} </span-->
 					</li>
 				</ul>
 			</div>
