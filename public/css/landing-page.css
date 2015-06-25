@@ -149,6 +149,16 @@ h6 {
     border-top: 3px solid #e7e7e7;
 }
 
+.list-group {
+	font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 18px;
+	text-align: center;
+}
+
+.posted-by {
+	color: gray;
+}
+
 .banner {
     padding: 100px 0;
     color: #f8f8f8;

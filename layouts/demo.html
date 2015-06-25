@@ -72,9 +72,6 @@
 	
 	<div class="content-demo">
         <div class="container">
-
-            <div class="row">
-                <div class="col-lg-9">
 					
 			<!-- form ng-controller="formCntrl">
     			<input type="text" id="name" placeholder="Name" ng-model="model.name" />
@@ -89,6 +86,9 @@
 			</form-->		
 					
 			<div ng-controller="PostsCtrl" class="container">
+				<div class="row">
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
 				<form role="form">
 					<div class="form-group">
 						<div class="image-text-demo">Dicci cosa ti piacerebbe fare ora.</div>
@@ -101,23 +101,25 @@
 						</div>
 					</div>		
 				</form>
-				
-				<ul class="list-group">
+				</div>
+				<div class="col-md-4"></div>
+				</div>
+				<div class="row">
+				<div class="col-md-3"></div>
+				<ul class="list-group col-md-6">
 					<li ng-repeat="post in posts | orderBy: '-date'" class="list-group-item">
-						<span>Utente: {{post.username}}</span>
+						<span>{{post.place}} - {{post.date_activity}}</span>
 						<br>
-						<span>Dove: {{post.place}} </span>
+						<span>{{post.body}}</span>
 						<br>
-						<span>Quando: {{post.date_activity}}</span>
-						<br>
-						<span> Cosa: {{post.body}}</span>
+						<span class="posted-by">Postato da: {{post.username}}</span>
 					</li>
 				</ul>
+				<div class="col-md-3"></div>
+				</div>
 			</div>
 		</div>
 			</div>
-			</div>
-	</div>
 	
 	    <!-- Footer -->
     <footer>
