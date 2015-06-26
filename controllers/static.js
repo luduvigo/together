@@ -8,5 +8,8 @@ router.get("/posts", function(req, res){
 router.get("/demo", function(req, res){
 	res.sendfile("layouts/demo.html")
 })
+router.get("/date", function(req, res){
+	res.sendfile("layouts/date_picker.html")
+})
 
 module.exports = router

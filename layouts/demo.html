@@ -28,6 +28,13 @@
     <![endif]-->
 	
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js"></script>
+	<script src="/app.js"></script>
 </head>	
 <body ng-app="app">
 	
@@ -73,17 +80,7 @@
 	<div class="content-demo">
         <div class="container">
 					
-			<!-- form ng-controller="formCntrl">
-    			<input type="text" id="name" placeholder="Name" ng-model="model.name" />
-    			<div ng-controller="dateCntrl">
-        			<input datepicker-popup="dd-MMMM-yyyy"  ng-model="$parent.model.startDate" id="startDate" type="text" />
-        			<button class="btn" ng-click="open()"><i class="icon-calendar"></i></button>
-    			</div>
-    			<div ng-controller="dateCntrl">
-        			<input datepicker-popup="dd-MMMM-yyyy" ng-model="$parent.model.endDate" id="endDate" type="text" />
-        			<button class="btn" ng-click="open()"><i class="icon-calendar"></i></button>
-    			</div>
-			</form-->		
+		
 					
 			<div ng-controller="PostsCtrl" class="container">
 				<div class="row">
@@ -94,7 +91,23 @@
 						<div class="image-text-demo">Dicci cosa ti piacerebbe fare ora.</div>
 						<div class="input-group">	
 							Dove:   <input ng-model="postPlace" class="form-control" /> <br>
-							Quando: <input ng-model="postDateActivity" class="form-control" /> <br>
+							<!-- div ng-controller="DatepickerDemoCtrl" -->
+								
+    						<div class="row">
+        					<div class="col-md-12">
+								Quando:
+								<p class="input-group">
+              						<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+              						<span class="input-group-btn">
+                						<button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              						</span>
+            					</p>
+        					</div>
+    						<!--/div -->
+							</div>
+							
+							
+							 <!-- input ng-model="postDateActivity" class="form-control" /> <br -->
 							Cosa:   <input ng-model="postBody" class="form-control" type="text-area" /> <br>
 							
 							<button ng-click="addPost()" class="btn btn-default">Aggiungi desiderio</button>
@@ -157,8 +170,5 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js"></script>
-	<script src="/app.js"></script>
 </body>
 </html>
