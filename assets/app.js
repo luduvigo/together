@@ -1,5 +1,5 @@
 //Create local app module
-var app = angular.module("app", [])
+var app = angular.module("app", ['ui.bootstrap'])
 
 app.service("PostsSvc", function($http){
 	this.fetch = function() {
