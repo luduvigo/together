@@ -5,6 +5,7 @@ var express = require('express'),
     cons = require('consolidate'),
     stylus = require('stylus');
 
+var bodyParser = require('body-parser')
 var Post = require("./models/post")
 
 app.use(express.static(__dirname + '/public'));
@@ -14,23 +15,14 @@ app.use(stylus.middleware({
     src: __dirname + '/views',
     dest: __dirname + '/public'
 }));  
-app.use(express.static(__dirname + '/public'));
-
-app.engine('html', cons.swig);
-app.set('view engine', 'html');
-app.set('views', __dirname + "/views");
-
-
-var bodyParser = require('body-parser')
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
       extended: true
 }));
 
-app.use(bodyParser.urlencoded({extended: true}));
-
 app.use("/api/posts", require("./controllers/api/posts"))
+app.use("/api/events", require("./controllers/api/events"))
 app.use(require("./controllers/static"))
 
 app.get('*', function(req, res){
