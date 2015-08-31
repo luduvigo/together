@@ -34,6 +34,8 @@ app.controller("PostsCtrl", function($scope, PostsSvc) {
 		function (posts) {
 			$scope.posts = posts	
 		})
+	
+	
 	$scope.today = function() {
     	$scope.dt = new Date();
   	};

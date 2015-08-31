@@ -7,11 +7,7 @@ var express = require('express'),
 
 var Post = require("./models/post")
 
-//set path to the views (template) directory
-app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
-
-app.set('view engine', 'jade');
 
 app.use(stylus.middleware({
     debug: true,
@@ -31,10 +27,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
       extended: true
 }));
-
-app.get('/', function (req, res) {
-    res.render('index');
-});
 
 app.use(bodyParser.urlencoded({extended: true}));
 

@@ -8,7 +8,7 @@
     <meta name="description" content="This is the Toghether Demo page">
     <meta name="author" content="Paolo Antonio Rossi">
 
-    <title>Insieme</title>
+    <title>Together</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -28,13 +28,6 @@
     <![endif]-->
 	
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-	
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.js"></script>
-    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.js"></script>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js"></script>
-	<script src="/app.js"></script>
 </head>	
 <body ng-app="app">
 	
@@ -51,7 +44,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" href="../#">Insieme</a>
+                <a class="navbar-brand topnav" href="../#">Together</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -66,7 +59,7 @@
                         <a href="../#contact">Contattaci</a>
                     </li>
 					<li>
-                        <a href="https://blog.insieme.io" target="_blank">Blog</a>
+                        <a href="https://together-blog.herokuapp.com/" target="_blank">Blog</a>
                     </li>
                 </ul>
             </div>
@@ -79,60 +72,36 @@
 	
 	<div class="content-demo">
         <div class="container">
-					
-		
-					
+
+            <div class="row">
+                <div class="col-lg-6">
 			<div ng-controller="PostsCtrl" class="container">
-				<div class="row">
-				<div class="col-md-4"></div>
-				<div class="col-md-4">
 				<form role="form">
 					<div class="form-group">
 						<div class="image-text-demo">Dicci cosa ti piacerebbe fare ora.</div>
-						<div class="input-group">	
-							Dove:   <input ng-model="postPlace" class="form-control" /> <br>
-							<!-- div ng-controller="DatepickerDemoCtrl" -->
-								
-    						<div class="row">
-        					<div class="col-md-12">
-								Quando:
-								<p class="input-group">
-              						<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
-              						<span class="input-group-btn">
-                						<button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-              						</span>
-            					</p>
-        					</div>
-    						<!--/div -->
-							</div>
-							
-							
-							 <!-- input ng-model="postDateActivity" class="form-control" /> <br -->
-							Cosa:   <input ng-model="postBody" class="form-control" type="text-area" /> <br>
-							
-							<button ng-click="addPost()" class="btn btn-default">Aggiungi desiderio</button>
+						<div class="input-group">
+							<input ng-model="postBody" class="form-control" />
+							<input ng-model="postPlace" class="form-control" />
+							<input ng-model="postDateActivity" class="form-control" />
+							<span class="input-group-btn">
+								<button ng-click="addPost()" class="btn btn-default">Aggiungi desiderio</button>
+							</span>
 						</div>
 					</div>		
 				</form>
-				</div>
-				<div class="col-md-4"></div>
-				</div>
-				<div class="row">
-				<div class="col-md-3"></div>
-				<ul class="list-group col-md-6">
+				
+				<ul class="list-group">
 					<li ng-repeat="post in posts | orderBy: '-date'" class="list-group-item">
-						<span>{{post.place}} - {{post.date_activity}}</span>
-						<br>
-						<span>{{post.body}}</span>
-						<br>
-						<span class="posted-by">Postato da: {{post.username}}</span>
+						{{ post }}
+						<!-- strong>{{post.username}}</strong>
+						<span>{{post.date_activity}} {{post.place}} </span-->
 					</li>
 				</ul>
-				<div class="col-md-3"></div>
-				</div>
 			</div>
 		</div>
 			</div>
+			</div>
+	</div>
 	
 	    <!-- Footer -->
     <footer>
@@ -157,7 +126,7 @@
                         </li>
 						<li class="footer-menu-divider">&sdot;</li>
 						<li>
-							<a href="http://blog.insieme.io" target="_blank">Blog</a>
+							<a href="https://together-blog.herokuapp.com/" target="_blank">Blog</a>
 						</li>
                     </ul>
 					<p class="copyright text-muted small">
@@ -170,5 +139,8 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js"></script>
+	<script src="/app.js"></script>
 </body>
 </html>
