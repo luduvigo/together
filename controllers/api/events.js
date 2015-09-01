@@ -15,7 +15,7 @@ router.post("/", function(req, res, next){
 	console.log("event received")
 	
 	var event = new Event({
-			title:		""
+			title:		"",
 	//when:               
 	//dateinserted:       {type: Date,     required: true, default: Date.now },
 	pictureurl:	      "",

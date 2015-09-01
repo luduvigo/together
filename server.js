@@ -25,9 +25,9 @@ app.use("/api/posts", require("./controllers/api/posts"))
 app.use("/api/events", require("./controllers/api/events"))
 app.use(require("./controllers/static"))
 
-app.get('*', function(req, res){
-	res.status(404).render("404");
-});
+//app.get('*', function(req, res){
+//	res.status(404).render("404");
+//});
 
 app.listen(process.env.PORT || 8080, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
