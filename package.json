@@ -1,5 +1,5 @@
 {
-  "name": "hackathon-starter",
+  "name": "insieme-project",
   "version": "0.0.1",
   "dependencies": {
     "body-parser": "~1.12.3",
