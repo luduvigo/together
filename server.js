@@ -6,7 +6,7 @@ var express = require('express'),
     stylus = require('stylus'),
     path = require('path');
 
-var favicon = require('serve-favicon');
+//var favicon = require('serve-favicon');
 var bodyParser = require('body-parser')
 var Post = require("./models/post")
 
