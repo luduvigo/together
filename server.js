@@ -6,14 +6,13 @@ var express = require('express'),
     stylus = require('stylus'),
     path = require('path');
 
-//var favicon = require('serve-favicon');
 var bodyParser = require('body-parser')
 var Post = require("./models/post")
 
-
+var favicon = require('serve-favicon');
 app.use(express.static(__dirname + '/public'));
+app.use(favicon(__dirname + '/public/favicon.ico'));
 
-//app.use(favicon(path.join(__dirname,'public','img','insieme_favicon_1.ico')));
 
 app.use(stylus.middleware({
     debug: true,
